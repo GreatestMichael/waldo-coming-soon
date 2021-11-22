@@ -11294,6 +11294,7 @@ html {
 body {
   height: 100%;
   position: relative;
+  background-color: black;
 }
 body:before {
   content: "";
