@@ -11308,32 +11308,54 @@ body:before {
   z-index: 1;
 }
 
-video.bg-video {
-  position: fixed;
-  top: 50%;
-  left: 75%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 0;
-}
-
-video.bg-video-two {
+video.bg-video-right {
 	position: fixed;
 	top: 50%;
-	left: -25%;
+	left: 50%;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
 	height: auto;
-	transform: translateX(-50%) translateY(-50%) rotateY(180deg);
 	z-index: 0;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotateY(180deg); /* Safari and Chrome */
-    -moz-transform: translateX(-50%) translateY(-50%) rotateY(180deg); /* Firefox */
+	transform: translateX(-25%) translateY(-50%);
+	-webkit-transform: translateX(-25%) translateY(-50%); /* Safari and Chrome */
+	-moz-transform: translateX(-25%) translateY(-50%); /* Firefox */
 }
 
+video.bg-video-left-and-flipped {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	transform: translateX(-125%) translateY(-50%) rotateY(180deg);
+    -webkit-transform: translateX(-125%) translateY(-50%) rotateY(180deg); /* Safari and Chrome */
+    -moz-transform: translateX(-125%) translateY(-50%) rotateY(180deg); /* Firefox */
+}
+
+@media (max-width: 576px) {
+	
+}
+@media (max-width: 768px) {
+	
+}
+@media (max-width: 992px) {
+	video.bg-video-left-and-flipped {
+		transform: translateX(-50%) translateY(-125%) rotateX(180deg);
+		-webkit-transform: translateX(-50%) translateY(-125%) rotateX(180deg); /* Safari and Chrome */
+		-moz-transform: translateX(-50%) translateY(-125%) rotateX(180deg); /* Firefox */
+	}
+	
+	video.bg-video-right {
+		transform: translateX(-50%) translateY(-25%);
+		-webkit-transform: translateX(-50%) translateY(-25%); /* Safari and Chrome */
+		-moz-transform: translateX(-50%) translateY(-25%); /* Firefox */
+	}
+}
+*/
 @media (pointer: coarse) and (hover: none) {
   body {
     background: url("../assets/img/bg-mobile-fallback.jpg") #2a5555 no-repeat center center scroll;
