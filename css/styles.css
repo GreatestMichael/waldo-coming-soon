@@ -11320,6 +11320,20 @@ video.bg-video {
   z-index: 0;
 }
 
+video.bg-video-two {
+	position: fixed;
+	top: 50%;
+	left: -25%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+	z-index: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateY(180deg); /* Safari and Chrome */
+    -moz-transform: translateX(-50%) translateY(-50%) rotateY(180deg); /* Firefox */
+}
+
 @media (pointer: coarse) and (hover: none) {
   body {
     background: url("../assets/img/bg-mobile-fallback.jpg") #2a5555 no-repeat center center scroll;
